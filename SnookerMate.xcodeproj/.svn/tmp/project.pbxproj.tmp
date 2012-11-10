@@ -1,0 +1,824 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5423D4B71484292C00DD7A80 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423D4B61484292C00DD7A80 /* Ball.m */; };
+		5439D85214CCB8B300CC005B /* snookerapp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5439D85114CCB8B300CC005B /* snookerapp.png */; };
+		5439D85514CCB91400CC005B /* Snookerapp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5439D85414CCB91400CC005B /* Snookerapp@2x.png */; };
+		546B273414842549007FC21F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273314842549007FC21F /* UIKit.framework */; };
+		546B273614842549007FC21F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273514842549007FC21F /* Foundation.framework */; };
+		546B273814842549007FC21F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273714842549007FC21F /* CoreGraphics.framework */; };
+		546B273A14842549007FC21F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273914842549007FC21F /* CoreData.framework */; };
+		546B274014842549007FC21F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 546B273E14842549007FC21F /* InfoPlist.strings */; };
+		546B274214842549007FC21F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B274114842549007FC21F /* main.m */; };
+		546B274614842549007FC21F /* SnookerMateAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B274514842549007FC21F /* SnookerMateAppDelegate.m */; };
+		546B274914842549007FC21F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546B274714842549007FC21F /* MainWindow.xib */; };
+		546B274C14842549007FC21F /* SnookerMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546B274A14842549007FC21F /* SnookerMate.xcdatamodeld */; };
+		546B27541484254A007FC21F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B27531484254A007FC21F /* SenTestingKit.framework */; };
+		546B27551484254A007FC21F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273314842549007FC21F /* UIKit.framework */; };
+		546B27561484254A007FC21F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273514842549007FC21F /* Foundation.framework */; };
+		546B27571484254A007FC21F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273714842549007FC21F /* CoreGraphics.framework */; };
+		546B27581484254A007FC21F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546B273914842549007FC21F /* CoreData.framework */; };
+		546B27601484254A007FC21F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 546B275E1484254A007FC21F /* InfoPlist.strings */; };
+		546B27621484254A007FC21F /* SnookerMateTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 546B27611484254A007FC21F /* SnookerMateTests.h */; };
+		546B27641484254A007FC21F /* SnookerMateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B27631484254A007FC21F /* SnookerMateTests.m */; };
+		546B5A6C1487CEB70085419C /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B5A6B1487CEB70085419C /* Stack.m */; };
+		546B5A721487D4540085419C /* ScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B5A701487D4540085419C /* ScoringViewController.m */; };
+		546B5A731487D4540085419C /* ScoringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546B5A711487D4540085419C /* ScoringViewController.xib */; };
+		546B5A8A1487E1CE0085419C /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B5A891487E1CE0085419C /* Frame.m */; };
+		546B5A8B1487E1CE0085419C /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 546B5A891487E1CE0085419C /* Frame.m */; };
+		547B088B14C86D9000D56EA3 /* TabClubsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B088914C86D9000D56EA3 /* TabClubsViewController.m */; };
+		547B088C14C86D9000D56EA3 /* TabClubsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547B088A14C86D9000D56EA3 /* TabClubsViewController.xib */; };
+		547B089014C878FA00D56EA3 /* AddClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B088E14C878FA00D56EA3 /* AddClubViewController.m */; };
+		547B089114C878FA00D56EA3 /* AddClubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547B088F14C878FA00D56EA3 /* AddClubViewController.xib */; };
+		547B089514C87EE100D56EA3 /* ListClubsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B089314C87EE100D56EA3 /* ListClubsViewController.m */; };
+		547B089614C87EE100D56EA3 /* ListClubsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547B089414C87EE100D56EA3 /* ListClubsViewController.xib */; };
+		547B089A14C880F000D56EA3 /* DisplayClubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B089814C880EF00D56EA3 /* DisplayClubViewController.m */; };
+		547B089B14C880F000D56EA3 /* DisplayClubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547B089914C880EF00D56EA3 /* DisplayClubViewController.xib */; };
+		547B089D14C892E900D56EA3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547B089C14C892E900D56EA3 /* MapKit.framework */; };
+		547B08A114C893C200D56EA3 /* MapClubsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B089F14C893C100D56EA3 /* MapClubsViewController.m */; };
+		547B08A214C893C200D56EA3 /* MapClubsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 547B08A014C893C200D56EA3 /* MapClubsViewController.xib */; };
+		547B08A514C8954A00D56EA3 /* ClubMapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B08A414C8954A00D56EA3 /* ClubMapViewAnnotation.m */; };
+		547B742114BDEE1700655879 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 547B742014BDEE1700655879 /* Player.m */; };
+		54867D6F14CC76A500B66091 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D6E14CC76A500B66091 /* Default@2x.png */; };
+		54867D7114CC76AC00B66091 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D7014CC76AC00B66091 /* Default.png */; };
+		54867D7514CC788D00B66091 /* UINavigationBarCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54867D7414CC788D00B66091 /* UINavigationBarCategory.m */; };
+		54867D7B14CC7A8800B66091 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D7A14CC7A8800B66091 /* Background.png */; };
+		54867D7D14CC7D8400B66091 /* Navigation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D7C14CC7D8400B66091 /* Navigation@2x.png */; };
+		54867D8214CC801D00B66091 /* HomeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D8014CC801D00B66091 /* HomeBackground.png */; };
+		54867D8B14CC83E600B66091 /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D8A14CC83E600B66091 /* Background@2x.png */; };
+		54867D8D14CC840F00B66091 /* HomeBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D8C14CC840E00B66091 /* HomeBackground@2x.png */; };
+		54867D9114CC865A00B66091 /* Navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 54867D9014CC865A00B66091 /* Navigation.png */; };
+		54867D9714CC8E6900B66091 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54867D9614CC8E6900B66091 /* QuartzCore.framework */; };
+		5496E71A1493AFA00012D702 /* Pot.m in Sources */ = {isa = PBXBuildFile; fileRef = 5496E7191493AFA00012D702 /* Pot.m */; };
+		5496E7211493DB530012D702 /* StateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5496E7201493DB530012D702 /* StateMachine.m */; };
+		549A937B14C9919A00F405D5 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 549A937A14C9919A00F405D5 /* libxml2.dylib */; };
+		549AA97D14CB72FB007076CD /* ResultsPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549AA97B14CB72FB007076CD /* ResultsPlayerViewController.m */; };
+		549AA97E14CB72FB007076CD /* ResultsPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 549AA97C14CB72FB007076CD /* ResultsPlayerViewController.xib */; };
+		54B89C1714CA12A20046B522 /* MapCentre.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B89C1614CA12A20046B522 /* MapCentre.m */; };
+		54C636A614C9A756003248E0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C636A514C9A756003248E0 /* CoreLocation.framework */; };
+		AC2C8D8614CB402A0049CA0A /* PlayerStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C8D8414CB402A0049CA0A /* PlayerStatsViewController.m */; };
+		AC2C8D8714CB402A0049CA0A /* PlayerStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2C8D8514CB402A0049CA0A /* PlayerStatsViewController.xib */; };
+		AC32507314CB082A001F28C1 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC32507114CB0829001F28C1 /* ResultViewController.m */; };
+		AC32507414CB082A001F28C1 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC32507214CB082A001F28C1 /* ResultViewController.xib */; };
+		AC32507714CB0AA6001F28C1 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = AC32507614CB0AA6001F28C1 /* Result.m */; };
+		FE1DD4D814BF5918003AD5D5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1DD4D614BF5918003AD5D5 /* HomeViewController.m */; };
+		FE1DD4D914BF5918003AD5D5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1DD4D714BF5918003AD5D5 /* HomeViewController.xib */; };
+		FE2119F614C0961D00484705 /* SelectPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2119F414C0961D00484705 /* SelectPlayersViewController.m */; };
+		FE2119F714C0961D00484705 /* SelectPlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2119F514C0961D00484705 /* SelectPlayersViewController.xib */; };
+		FE3A98AE14BDE3650013B528 /* AddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3A98AC14BDE3650013B528 /* AddPlayerViewController.m */; };
+		FE3A98AF14BDE3650013B528 /* AddPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3A98AD14BDE3650013B528 /* AddPlayerViewController.xib */; };
+		FE41171614BF49C900695F78 /* DisplayPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41171414BF49C900695F78 /* DisplayPlayerViewController.m */; };
+		FE41171714BF49C900695F78 /* DisplayPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE41171514BF49C900695F78 /* DisplayPlayerViewController.xib */; };
+		FE6E3E1414C5C11C00D445CC /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6E3E1314C5C11C00D445CC /* Club.m */; };
+		FE9D793A14C5A486003D6C1E /* BreakSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9D793814C5A486003D6C1E /* BreakSelectorViewController.m */; };
+		FE9D793B14C5A486003D6C1E /* BreakSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9D793914C5A486003D6C1E /* BreakSelectorViewController.xib */; };
+		FED88F1C14BF36980047CCCF /* ListPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED88F1A14BF36980047CCCF /* ListPlayersViewController.m */; };
+		FED88F1D14BF36980047CCCF /* ListPlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED88F1B14BF36980047CCCF /* ListPlayersViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		546B27591484254A007FC21F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 546B272614842549007FC21F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 546B272E14842549007FC21F;
+			remoteInfo = SnookerMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5423D4B51484292C00DD7A80 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		5423D4B61484292C00DD7A80 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		5439D85114CCB8B300CC005B /* snookerapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snookerapp.png; path = ../snookerapp.png; sourceTree = "<group>"; };
+		5439D85414CCB91400CC005B /* Snookerapp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Snookerapp@2x.png"; path = "../Snookerapp@2x.png"; sourceTree = "<group>"; };
+		546B272F14842549007FC21F /* SnookerMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnookerMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		546B273314842549007FC21F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		546B273514842549007FC21F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		546B273714842549007FC21F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		546B273914842549007FC21F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		546B273D14842549007FC21F /* SnookerMate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnookerMate-Info.plist"; sourceTree = "<group>"; };
+		546B273F14842549007FC21F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		546B274114842549007FC21F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		546B274314842549007FC21F /* SnookerMate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnookerMate-Prefix.pch"; sourceTree = "<group>"; };
+		546B274414842549007FC21F /* SnookerMateAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnookerMateAppDelegate.h; sourceTree = "<group>"; };
+		546B274514842549007FC21F /* SnookerMateAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnookerMateAppDelegate.m; sourceTree = "<group>"; };
+		546B274814842549007FC21F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		546B274B14842549007FC21F /* SnookerMate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnookerMate.xcdatamodel; sourceTree = "<group>"; };
+		546B27521484254A007FC21F /* SnookerMateTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnookerMateTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		546B27531484254A007FC21F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		546B275D1484254A007FC21F /* SnookerMateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnookerMateTests-Info.plist"; sourceTree = "<group>"; };
+		546B275F1484254A007FC21F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		546B27611484254A007FC21F /* SnookerMateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnookerMateTests.h; sourceTree = "<group>"; };
+		546B27631484254A007FC21F /* SnookerMateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnookerMateTests.m; sourceTree = "<group>"; };
+		546B5A6A1487CEB70085419C /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		546B5A6B1487CEB70085419C /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		546B5A6F1487D4540085419C /* ScoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoringViewController.h; sourceTree = "<group>"; };
+		546B5A701487D4540085419C /* ScoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoringViewController.m; sourceTree = "<group>"; };
+		546B5A711487D4540085419C /* ScoringViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoringViewController.xib; sourceTree = "<group>"; };
+		546B5A881487E1CE0085419C /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		546B5A891487E1CE0085419C /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; };
+		547B088814C86D9000D56EA3 /* TabClubsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabClubsViewController.h; sourceTree = "<group>"; };
+		547B088914C86D9000D56EA3 /* TabClubsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabClubsViewController.m; sourceTree = "<group>"; };
+		547B088A14C86D9000D56EA3 /* TabClubsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabClubsViewController.xib; sourceTree = "<group>"; };
+		547B088D14C878FA00D56EA3 /* AddClubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClubViewController.h; sourceTree = "<group>"; };
+		547B088E14C878FA00D56EA3 /* AddClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClubViewController.m; sourceTree = "<group>"; };
+		547B088F14C878FA00D56EA3 /* AddClubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClubViewController.xib; sourceTree = "<group>"; };
+		547B089214C87EE000D56EA3 /* ListClubsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListClubsViewController.h; sourceTree = "<group>"; };
+		547B089314C87EE100D56EA3 /* ListClubsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListClubsViewController.m; sourceTree = "<group>"; };
+		547B089414C87EE100D56EA3 /* ListClubsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListClubsViewController.xib; sourceTree = "<group>"; };
+		547B089714C880EF00D56EA3 /* DisplayClubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayClubViewController.h; sourceTree = "<group>"; };
+		547B089814C880EF00D56EA3 /* DisplayClubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayClubViewController.m; sourceTree = "<group>"; };
+		547B089914C880EF00D56EA3 /* DisplayClubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayClubViewController.xib; sourceTree = "<group>"; };
+		547B089C14C892E900D56EA3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		547B089E14C893C100D56EA3 /* MapClubsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapClubsViewController.h; sourceTree = "<group>"; };
+		547B089F14C893C100D56EA3 /* MapClubsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapClubsViewController.m; sourceTree = "<group>"; };
+		547B08A014C893C200D56EA3 /* MapClubsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapClubsViewController.xib; sourceTree = "<group>"; };
+		547B08A314C8954A00D56EA3 /* ClubMapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubMapViewAnnotation.h; sourceTree = "<group>"; };
+		547B08A414C8954A00D56EA3 /* ClubMapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubMapViewAnnotation.m; sourceTree = "<group>"; };
+		547B741F14BDEE1700655879 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		547B742014BDEE1700655879 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		54867D6E14CC76A500B66091 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		54867D7014CC76AC00B66091 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		54867D7314CC788D00B66091 /* UINavigationBarCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarCategory.h; sourceTree = "<group>"; };
+		54867D7414CC788D00B66091 /* UINavigationBarCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarCategory.m; sourceTree = "<group>"; };
+		54867D7A14CC7A8800B66091 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		54867D7C14CC7D8400B66091 /* Navigation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation@2x.png"; sourceTree = "<group>"; };
+		54867D8014CC801D00B66091 /* HomeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeBackground.png; sourceTree = "<group>"; };
+		54867D8A14CC83E600B66091 /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
+		54867D8C14CC840E00B66091 /* HomeBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HomeBackground@2x.png"; sourceTree = "<group>"; };
+		54867D9014CC865A00B66091 /* Navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navigation.png; sourceTree = "<group>"; };
+		54867D9614CC8E6900B66091 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5496E7181493AFA00012D702 /* Pot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pot.h; sourceTree = "<group>"; };
+		5496E7191493AFA00012D702 /* Pot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pot.m; sourceTree = "<group>"; };
+		5496E71F1493DB530012D702 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
+		5496E7201493DB530012D702 /* StateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateMachine.m; sourceTree = "<group>"; };
+		549A937A14C9919A00F405D5 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		549AA97A14CB72FB007076CD /* ResultsPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsPlayerViewController.h; sourceTree = "<group>"; };
+		549AA97B14CB72FB007076CD /* ResultsPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsPlayerViewController.m; sourceTree = "<group>"; };
+		549AA97C14CB72FB007076CD /* ResultsPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsPlayerViewController.xib; sourceTree = "<group>"; };
+		54B89C1514CA12A20046B522 /* MapCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCentre.h; sourceTree = "<group>"; };
+		54B89C1614CA12A20046B522 /* MapCentre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCentre.m; sourceTree = "<group>"; };
+		54C636A514C9A756003248E0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC2C8D8314CB402A0049CA0A /* PlayerStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatsViewController.h; sourceTree = "<group>"; };
+		AC2C8D8414CB402A0049CA0A /* PlayerStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStatsViewController.m; sourceTree = "<group>"; };
+		AC2C8D8514CB402A0049CA0A /* PlayerStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerStatsViewController.xib; sourceTree = "<group>"; };
+		AC32507014CB0829001F28C1 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		AC32507114CB0829001F28C1 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		AC32507214CB082A001F28C1 /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		AC32507514CB0AA6001F28C1 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		AC32507614CB0AA6001F28C1 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		FE1DD4D514BF5918003AD5D5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		FE1DD4D614BF5918003AD5D5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		FE1DD4D714BF5918003AD5D5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FE2119F314C0961D00484705 /* SelectPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPlayersViewController.h; sourceTree = "<group>"; };
+		FE2119F414C0961D00484705 /* SelectPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPlayersViewController.m; sourceTree = "<group>"; };
+		FE2119F514C0961D00484705 /* SelectPlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectPlayersViewController.xib; sourceTree = "<group>"; };
+		FE3A98AB14BDE3650013B528 /* AddPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlayerViewController.h; sourceTree = "<group>"; };
+		FE3A98AC14BDE3650013B528 /* AddPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlayerViewController.m; sourceTree = "<group>"; };
+		FE3A98AD14BDE3650013B528 /* AddPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlayerViewController.xib; sourceTree = "<group>"; };
+		FE41171314BF49C900695F78 /* DisplayPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayPlayerViewController.h; sourceTree = "<group>"; };
+		FE41171414BF49C900695F78 /* DisplayPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayPlayerViewController.m; sourceTree = "<group>"; };
+		FE41171514BF49C900695F78 /* DisplayPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayPlayerViewController.xib; sourceTree = "<group>"; };
+		FE6E3E1214C5C11C00D445CC /* Club.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Club.h; sourceTree = "<group>"; };
+		FE6E3E1314C5C11C00D445CC /* Club.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Club.m; sourceTree = "<group>"; };
+		FE9D793714C5A486003D6C1E /* BreakSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakSelectorViewController.h; sourceTree = "<group>"; };
+		FE9D793814C5A486003D6C1E /* BreakSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakSelectorViewController.m; sourceTree = "<group>"; };
+		FE9D793914C5A486003D6C1E /* BreakSelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreakSelectorViewController.xib; sourceTree = "<group>"; };
+		FED88F1914BF36980047CCCF /* ListPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPlayersViewController.h; sourceTree = "<group>"; };
+		FED88F1A14BF36980047CCCF /* ListPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPlayersViewController.m; sourceTree = "<group>"; };
+		FED88F1B14BF36980047CCCF /* ListPlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlayersViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		546B272C14842549007FC21F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54867D9714CC8E6900B66091 /* QuartzCore.framework in Frameworks */,
+				549A937B14C9919A00F405D5 /* libxml2.dylib in Frameworks */,
+				54C636A614C9A756003248E0 /* CoreLocation.framework in Frameworks */,
+				547B089D14C892E900D56EA3 /* MapKit.framework in Frameworks */,
+				546B273414842549007FC21F /* UIKit.framework in Frameworks */,
+				546B273614842549007FC21F /* Foundation.framework in Frameworks */,
+				546B273814842549007FC21F /* CoreGraphics.framework in Frameworks */,
+				546B273A14842549007FC21F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546B274E1484254A007FC21F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546B27541484254A007FC21F /* SenTestingKit.framework in Frameworks */,
+				546B27551484254A007FC21F /* UIKit.framework in Frameworks */,
+				546B27561484254A007FC21F /* Foundation.framework in Frameworks */,
+				546B27571484254A007FC21F /* CoreGraphics.framework in Frameworks */,
+				546B27581484254A007FC21F /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		546B272414842549007FC21F = {
+			isa = PBXGroup;
+			children = (
+				54867D9614CC8E6900B66091 /* QuartzCore.framework */,
+				546B273B14842549007FC21F /* SnookerMate */,
+				546B275B1484254A007FC21F /* SnookerMateTests */,
+				546B273214842549007FC21F /* Frameworks */,
+				546B273014842549007FC21F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		546B273014842549007FC21F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				546B272F14842549007FC21F /* SnookerMate.app */,
+				546B27521484254A007FC21F /* SnookerMateTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		546B273214842549007FC21F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549A937A14C9919A00F405D5 /* libxml2.dylib */,
+				54C636A514C9A756003248E0 /* CoreLocation.framework */,
+				547B089C14C892E900D56EA3 /* MapKit.framework */,
+				546B273314842549007FC21F /* UIKit.framework */,
+				546B273514842549007FC21F /* Foundation.framework */,
+				546B273714842549007FC21F /* CoreGraphics.framework */,
+				546B273914842549007FC21F /* CoreData.framework */,
+				546B27531484254A007FC21F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		546B273B14842549007FC21F /* SnookerMate */ = {
+			isa = PBXGroup;
+			children = (
+				54867D7214CC786100B66091 /* Template */,
+				54867D6B14CC766000B66091 /* Graphics */,
+				549A937D14C9984800F405D5 /* Map */,
+				FE3A98B114BDE3710013B528 /* ViewControllers */,
+				546B5A8C1487E1D20085419C /* Model */,
+				546B5A6E1487CEBF0085419C /* Utility */,
+				546B274414842549007FC21F /* SnookerMateAppDelegate.h */,
+				546B274514842549007FC21F /* SnookerMateAppDelegate.m */,
+				546B274714842549007FC21F /* MainWindow.xib */,
+				546B274A14842549007FC21F /* SnookerMate.xcdatamodeld */,
+				546B273C14842549007FC21F /* Supporting Files */,
+			);
+			path = SnookerMate;
+			sourceTree = "<group>";
+		};
+		546B273C14842549007FC21F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				546B273D14842549007FC21F /* SnookerMate-Info.plist */,
+				546B273E14842549007FC21F /* InfoPlist.strings */,
+				546B274114842549007FC21F /* main.m */,
+				546B274314842549007FC21F /* SnookerMate-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		546B275B1484254A007FC21F /* SnookerMateTests */ = {
+			isa = PBXGroup;
+			children = (
+				546B27611484254A007FC21F /* SnookerMateTests.h */,
+				546B27631484254A007FC21F /* SnookerMateTests.m */,
+				546B275C1484254A007FC21F /* Supporting Files */,
+			);
+			path = SnookerMateTests;
+			sourceTree = "<group>";
+		};
+		546B275C1484254A007FC21F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				546B275D1484254A007FC21F /* SnookerMateTests-Info.plist */,
+				546B275E1484254A007FC21F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		546B5A6E1487CEBF0085419C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5423D4B51484292C00DD7A80 /* Ball.h */,
+				5423D4B61484292C00DD7A80 /* Ball.m */,
+				5496E7181493AFA00012D702 /* Pot.h */,
+				5496E7191493AFA00012D702 /* Pot.m */,
+				546B5A6A1487CEB70085419C /* Stack.h */,
+				546B5A6B1487CEB70085419C /* Stack.m */,
+				5496E71F1493DB530012D702 /* StateMachine.h */,
+				5496E7201493DB530012D702 /* StateMachine.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		546B5A8C1487E1D20085419C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC32507514CB0AA6001F28C1 /* Result.h */,
+				AC32507614CB0AA6001F28C1 /* Result.m */,
+				FE6E3E1214C5C11C00D445CC /* Club.h */,
+				FE6E3E1314C5C11C00D445CC /* Club.m */,
+				546B5A881487E1CE0085419C /* Frame.h */,
+				546B5A891487E1CE0085419C /* Frame.m */,
+				547B741F14BDEE1700655879 /* Player.h */,
+				547B742014BDEE1700655879 /* Player.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		54867D6B14CC766000B66091 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5439D85414CCB91400CC005B /* Snookerapp@2x.png */,
+				5439D85114CCB8B300CC005B /* snookerapp.png */,
+				54867D9014CC865A00B66091 /* Navigation.png */,
+				54867D8C14CC840E00B66091 /* HomeBackground@2x.png */,
+				54867D8A14CC83E600B66091 /* Background@2x.png */,
+				54867D8014CC801D00B66091 /* HomeBackground.png */,
+				54867D7C14CC7D8400B66091 /* Navigation@2x.png */,
+				54867D7A14CC7A8800B66091 /* Background.png */,
+				54867D7014CC76AC00B66091 /* Default.png */,
+				54867D6E14CC76A500B66091 /* Default@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		54867D7214CC786100B66091 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				54867D7314CC788D00B66091 /* UINavigationBarCategory.h */,
+				54867D7414CC788D00B66091 /* UINavigationBarCategory.m */,
+			);
+			name = Template;
+			sourceTree = "<group>";
+		};
+		549A937D14C9984800F405D5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				547B08A314C8954A00D56EA3 /* ClubMapViewAnnotation.h */,
+				547B08A414C8954A00D56EA3 /* ClubMapViewAnnotation.m */,
+				54B89C1514CA12A20046B522 /* MapCentre.h */,
+				54B89C1614CA12A20046B522 /* MapCentre.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		FE3A98B114BDE3710013B528 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE6E3DFA14C5BF6300D445CC /* Clubs */,
+				FE9D793F14C5A4ED003D6C1E /* Home */,
+				FE9D793E14C5A4DE003D6C1E /* Scoring */,
+				FE9D793D14C5A4D0003D6C1E /* Players */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FE6E3DFA14C5BF6300D445CC /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				547B088814C86D9000D56EA3 /* TabClubsViewController.h */,
+				547B088914C86D9000D56EA3 /* TabClubsViewController.m */,
+				547B088A14C86D9000D56EA3 /* TabClubsViewController.xib */,
+				547B088D14C878FA00D56EA3 /* AddClubViewController.h */,
+				547B088E14C878FA00D56EA3 /* AddClubViewController.m */,
+				547B088F14C878FA00D56EA3 /* AddClubViewController.xib */,
+				547B089214C87EE000D56EA3 /* ListClubsViewController.h */,
+				547B089314C87EE100D56EA3 /* ListClubsViewController.m */,
+				547B089414C87EE100D56EA3 /* ListClubsViewController.xib */,
+				547B089714C880EF00D56EA3 /* DisplayClubViewController.h */,
+				547B089814C880EF00D56EA3 /* DisplayClubViewController.m */,
+				547B089914C880EF00D56EA3 /* DisplayClubViewController.xib */,
+				547B089E14C893C100D56EA3 /* MapClubsViewController.h */,
+				547B089F14C893C100D56EA3 /* MapClubsViewController.m */,
+				547B08A014C893C200D56EA3 /* MapClubsViewController.xib */,
+			);
+			name = Clubs;
+			sourceTree = "<group>";
+		};
+		FE9D793D14C5A4D0003D6C1E /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				FE41171314BF49C900695F78 /* DisplayPlayerViewController.h */,
+				FE41171414BF49C900695F78 /* DisplayPlayerViewController.m */,
+				FE41171514BF49C900695F78 /* DisplayPlayerViewController.xib */,
+				FE3A98AB14BDE3650013B528 /* AddPlayerViewController.h */,
+				FE3A98AC14BDE3650013B528 /* AddPlayerViewController.m */,
+				FED88F1914BF36980047CCCF /* ListPlayersViewController.h */,
+				FED88F1A14BF36980047CCCF /* ListPlayersViewController.m */,
+				FED88F1B14BF36980047CCCF /* ListPlayersViewController.xib */,
+				FE3A98AD14BDE3650013B528 /* AddPlayerViewController.xib */,
+				FE2119F314C0961D00484705 /* SelectPlayersViewController.h */,
+				FE2119F414C0961D00484705 /* SelectPlayersViewController.m */,
+				FE2119F514C0961D00484705 /* SelectPlayersViewController.xib */,
+				AC2C8D8314CB402A0049CA0A /* PlayerStatsViewController.h */,
+				AC2C8D8414CB402A0049CA0A /* PlayerStatsViewController.m */,
+				AC2C8D8514CB402A0049CA0A /* PlayerStatsViewController.xib */,
+				549AA97A14CB72FB007076CD /* ResultsPlayerViewController.h */,
+				549AA97B14CB72FB007076CD /* ResultsPlayerViewController.m */,
+				549AA97C14CB72FB007076CD /* ResultsPlayerViewController.xib */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		FE9D793E14C5A4DE003D6C1E /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				546B5A6F1487D4540085419C /* ScoringViewController.h */,
+				546B5A701487D4540085419C /* ScoringViewController.m */,
+				546B5A711487D4540085419C /* ScoringViewController.xib */,
+				FE9D793714C5A486003D6C1E /* BreakSelectorViewController.h */,
+				FE9D793814C5A486003D6C1E /* BreakSelectorViewController.m */,
+				FE9D793914C5A486003D6C1E /* BreakSelectorViewController.xib */,
+				AC32507014CB0829001F28C1 /* ResultViewController.h */,
+				AC32507114CB0829001F28C1 /* ResultViewController.m */,
+				AC32507214CB082A001F28C1 /* ResultViewController.xib */,
+			);
+			name = Scoring;
+			sourceTree = "<group>";
+		};
+		FE9D793F14C5A4ED003D6C1E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE1DD4D514BF5918003AD5D5 /* HomeViewController.h */,
+				FE1DD4D614BF5918003AD5D5 /* HomeViewController.m */,
+				FE1DD4D714BF5918003AD5D5 /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		546B272E14842549007FC21F /* SnookerMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546B27671484254A007FC21F /* Build configuration list for PBXNativeTarget "SnookerMate" */;
+			buildPhases = (
+				546B272B14842549007FC21F /* Sources */,
+				546B272C14842549007FC21F /* Frameworks */,
+				546B272D14842549007FC21F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnookerMate;
+			productName = SnookerMate;
+			productReference = 546B272F14842549007FC21F /* SnookerMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		546B27511484254A007FC21F /* SnookerMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546B276A1484254A007FC21F /* Build configuration list for PBXNativeTarget "SnookerMateTests" */;
+			buildPhases = (
+				546B274D1484254A007FC21F /* Sources */,
+				546B274E1484254A007FC21F /* Frameworks */,
+				546B274F1484254A007FC21F /* Resources */,
+				546B27501484254A007FC21F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				546B275A1484254A007FC21F /* PBXTargetDependency */,
+			);
+			name = SnookerMateTests;
+			productName = SnookerMateTests;
+			productReference = 546B27521484254A007FC21F /* SnookerMateTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		546B272614842549007FC21F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Mark Dessain";
+			};
+			buildConfigurationList = 546B272914842549007FC21F /* Build configuration list for PBXProject "SnookerMate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 546B272414842549007FC21F;
+			productRefGroup = 546B273014842549007FC21F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				546B272E14842549007FC21F /* SnookerMate */,
+				546B27511484254A007FC21F /* SnookerMateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		546B272D14842549007FC21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546B274014842549007FC21F /* InfoPlist.strings in Resources */,
+				546B274914842549007FC21F /* MainWindow.xib in Resources */,
+				546B5A731487D4540085419C /* ScoringViewController.xib in Resources */,
+				FE3A98AF14BDE3650013B528 /* AddPlayerViewController.xib in Resources */,
+				FED88F1D14BF36980047CCCF /* ListPlayersViewController.xib in Resources */,
+				FE41171714BF49C900695F78 /* DisplayPlayerViewController.xib in Resources */,
+				FE1DD4D914BF5918003AD5D5 /* HomeViewController.xib in Resources */,
+				FE2119F714C0961D00484705 /* SelectPlayersViewController.xib in Resources */,
+				FE9D793B14C5A486003D6C1E /* BreakSelectorViewController.xib in Resources */,
+				547B088C14C86D9000D56EA3 /* TabClubsViewController.xib in Resources */,
+				547B089114C878FA00D56EA3 /* AddClubViewController.xib in Resources */,
+				547B089614C87EE100D56EA3 /* ListClubsViewController.xib in Resources */,
+				547B089B14C880F000D56EA3 /* DisplayClubViewController.xib in Resources */,
+				547B08A214C893C200D56EA3 /* MapClubsViewController.xib in Resources */,
+				AC32507414CB082A001F28C1 /* ResultViewController.xib in Resources */,
+				AC2C8D8714CB402A0049CA0A /* PlayerStatsViewController.xib in Resources */,
+				549AA97E14CB72FB007076CD /* ResultsPlayerViewController.xib in Resources */,
+				54867D6F14CC76A500B66091 /* Default@2x.png in Resources */,
+				54867D7114CC76AC00B66091 /* Default.png in Resources */,
+				54867D7B14CC7A8800B66091 /* Background.png in Resources */,
+				54867D7D14CC7D8400B66091 /* Navigation@2x.png in Resources */,
+				54867D8214CC801D00B66091 /* HomeBackground.png in Resources */,
+				54867D8B14CC83E600B66091 /* Background@2x.png in Resources */,
+				54867D8D14CC840F00B66091 /* HomeBackground@2x.png in Resources */,
+				54867D9114CC865A00B66091 /* Navigation.png in Resources */,
+				5439D85214CCB8B300CC005B /* snookerapp.png in Resources */,
+				5439D85514CCB91400CC005B /* Snookerapp@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546B274F1484254A007FC21F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546B27601484254A007FC21F /* InfoPlist.strings in Resources */,
+				546B27621484254A007FC21F /* SnookerMateTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		546B27501484254A007FC21F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546B272B14842549007FC21F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546B274214842549007FC21F /* main.m in Sources */,
+				546B274614842549007FC21F /* SnookerMateAppDelegate.m in Sources */,
+				546B274C14842549007FC21F /* SnookerMate.xcdatamodeld in Sources */,
+				5423D4B71484292C00DD7A80 /* Ball.m in Sources */,
+				546B5A6C1487CEB70085419C /* Stack.m in Sources */,
+				546B5A721487D4540085419C /* ScoringViewController.m in Sources */,
+				546B5A8A1487E1CE0085419C /* Frame.m in Sources */,
+				5496E71A1493AFA00012D702 /* Pot.m in Sources */,
+				5496E7211493DB530012D702 /* StateMachine.m in Sources */,
+				FE3A98AE14BDE3650013B528 /* AddPlayerViewController.m in Sources */,
+				547B742114BDEE1700655879 /* Player.m in Sources */,
+				FED88F1C14BF36980047CCCF /* ListPlayersViewController.m in Sources */,
+				FE41171614BF49C900695F78 /* DisplayPlayerViewController.m in Sources */,
+				FE1DD4D814BF5918003AD5D5 /* HomeViewController.m in Sources */,
+				FE2119F614C0961D00484705 /* SelectPlayersViewController.m in Sources */,
+				FE9D793A14C5A486003D6C1E /* BreakSelectorViewController.m in Sources */,
+				FE6E3E1414C5C11C00D445CC /* Club.m in Sources */,
+				547B088B14C86D9000D56EA3 /* TabClubsViewController.m in Sources */,
+				547B089014C878FA00D56EA3 /* AddClubViewController.m in Sources */,
+				547B089514C87EE100D56EA3 /* ListClubsViewController.m in Sources */,
+				547B089A14C880F000D56EA3 /* DisplayClubViewController.m in Sources */,
+				547B08A114C893C200D56EA3 /* MapClubsViewController.m in Sources */,
+				547B08A514C8954A00D56EA3 /* ClubMapViewAnnotation.m in Sources */,
+				54B89C1714CA12A20046B522 /* MapCentre.m in Sources */,
+				AC32507314CB082A001F28C1 /* ResultViewController.m in Sources */,
+				AC32507714CB0AA6001F28C1 /* Result.m in Sources */,
+				AC2C8D8614CB402A0049CA0A /* PlayerStatsViewController.m in Sources */,
+				549AA97D14CB72FB007076CD /* ResultsPlayerViewController.m in Sources */,
+				54867D7514CC788D00B66091 /* UINavigationBarCategory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546B274D1484254A007FC21F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546B27641484254A007FC21F /* SnookerMateTests.m in Sources */,
+				546B5A8B1487E1CE0085419C /* Frame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		546B275A1484254A007FC21F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 546B272E14842549007FC21F /* SnookerMate */;
+			targetProxy = 546B27591484254A007FC21F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		546B273E14842549007FC21F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546B273F14842549007FC21F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		546B274714842549007FC21F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546B274814842549007FC21F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		546B275E1484254A007FC21F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				546B275F1484254A007FC21F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		546B27651484254A007FC21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		546B27661484254A007FC21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		546B27681484254A007FC21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnookerMate/SnookerMate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SnookerMate/SnookerMate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		546B27691484254A007FC21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnookerMate/SnookerMate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SnookerMate/SnookerMate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		546B276B1484254A007FC21F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SnookerMate.app/SnookerMate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnookerMate/SnookerMate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SnookerMateTests/SnookerMateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		546B276C1484254A007FC21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SnookerMate.app/SnookerMate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnookerMate/SnookerMate-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SnookerMateTests/SnookerMateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		546B272914842549007FC21F /* Build configuration list for PBXProject "SnookerMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546B27651484254A007FC21F /* Debug */,
+				546B27661484254A007FC21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546B27671484254A007FC21F /* Build configuration list for PBXNativeTarget "SnookerMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546B27681484254A007FC21F /* Debug */,
+				546B27691484254A007FC21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546B276A1484254A007FC21F /* Build configuration list for PBXNativeTarget "SnookerMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546B276B1484254A007FC21F /* Debug */,
+				546B276C1484254A007FC21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		546B274A14842549007FC21F /* SnookerMate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				546B274B14842549007FC21F /* SnookerMate.xcdatamodel */,
+			);
+			currentVersion = 546B274B14842549007FC21F /* SnookerMate.xcdatamodel */;
+			path = SnookerMate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 546B272614842549007FC21F /* Project object */;
+}

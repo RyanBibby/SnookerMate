@@ -1,0 +1,286 @@
+//
+//  ResultsPlayerViewController.m
+//  SnookerMate
+//
+//  Created by Mark Dessain on 21/01/2012.
+//  Copyright 2012 Mark Dessain. All rights reserved.
+//
+
+#import "ResultsPlayerViewController.h"
+#import "Result.h"
+#import "Club.h"
+
+@implementation ResultsPlayerViewController
+
+@synthesize managedObjectContext, player, tableData;
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+
+-(void) update {
+
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Result" inManagedObjectContext:managedObjectContext];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(firstPlayer == %@) OR (secondPlayer == %@)", self.player,self.player];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];  
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];  
+    [request setSortDescriptors:sortDescriptors];  
+     
+    
+    
+    [request setEntity:entity];
+    [request setPredicate:pred];
+    NSError *error;
+    NSMutableArray *allResults = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    
+//    for(Result *win in allResults) {
+//        
+//        
+//        @try {
+//            NSLog(@"%@ %@", win.firstPlayer.name, win.firstPlayerScore);        
+//        }
+//        @catch (NSException * e) {
+//            NSLog(@"Player Deleted %@", win.firstPlayerScore);
+//        }
+//        @finally {
+//        }
+//        
+//        
+//        @try {
+//            NSLog(@"%@ %@", win.secondPlayer.name, win.secondPlayerScore);        
+//        }
+//        @catch (NSException * e) {
+//            NSLog(@"Player Deleted %@", win.secondPlayerScore);
+//        }
+//        @finally {
+//        }
+//        
+//        
+//    }
+//    
+    self.tableData = allResults;
+    
+    [sortDescriptor release];  
+    [request release];
+    [allResults release];
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self update];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self update];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [self.tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    Result *result = [self.tableData objectAtIndex:indexPath.row];
+    
+    
+    static NSDateFormatter *dateFormatter = nil; 
+    
+    if (dateFormatter == nil) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd/MM/yyyy h:mm a"];
+    }
+
+    
+    
+    NSString *firstPlayer;
+    NSString *date = [dateFormatter stringFromDate: [result timeStamp]];
+    NSString *firstPlayerScore = [NSString stringWithFormat:@"%@", result.firstPlayerScore];
+    NSString *secondPlayer;
+    NSString *secondPlayerScore = [NSString stringWithFormat:@"%@", result.secondPlayerScore];
+    NSString *club;
+    
+    BOOL won;
+    
+    @try {
+        firstPlayer = [NSString stringWithFormat:@"%@", result.firstPlayer.name];
+        if(result.firstPlayer == self.player) {
+            won = YES;
+        }
+    }
+    @catch (NSException * e) {
+        firstPlayer = [NSString stringWithFormat:@"Player Deleted"];
+    }
+    @finally {
+    }
+    
+    
+    @try {
+        secondPlayer = [NSString stringWithFormat:@"%@", result.secondPlayer.name];
+        if(result.secondPlayer == self.player) {
+            won = NO;
+        }
+    }
+    @catch (NSException * e) {
+        secondPlayer = [NSString stringWithFormat:@"Player Deleted"];
+    }
+    @finally {
+    }
+    
+    
+    @try {
+        if(result.club.name != nil) {
+            club = [NSString stringWithFormat:@"Club %@ |", result.club.name];
+        } else {
+            club = [NSString stringWithFormat:@""];
+        }
+    }
+    @catch (NSException * e) {
+        club = [NSString stringWithFormat:@""];
+    }
+    @finally {
+    }
+    
+    
+    
+    if(won) {
+        cell.textLabel.text = secondPlayer;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ | %@ %@", firstPlayerScore, secondPlayerScore, club, date];
+    } else {
+        cell.textLabel.text = firstPlayer;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ | %@ %@", secondPlayerScore, firstPlayerScore, club, date];
+    }
+    
+    
+    
+    
+//    cell.detailTextLabel
+    // Configure the cell...
+    
+    return cell;
+}
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     [detailViewController release];
+     */
+}
+
+@end

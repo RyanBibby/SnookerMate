@@ -1,0 +1,39 @@
+//
+//  StateMachine.h
+//  SnookerMate
+//
+//  Created by Ryan Bibby & Mark Dessain on 10/12/2011.
+//
+
+#import <Foundation/Foundation.h>
+
+
+@protocol StateMachine
+
+-(id <StateMachine, NSObject>)redButton;
+-(id <StateMachine, NSObject>)colourButton;
+-(id <StateMachine, NSObject>)finalNominatedColourButton;
+-(id <StateMachine, NSObject>)foulButton;
+-(id <StateMachine, NSObject>)changePlayerButton;
+
+@end
+
+@interface StateMachine : NSObject <StateMachine>
+
+@property (nonatomic, retain) NSMutableDictionary *balls;
+
+-(id <StateMachine, NSObject>)initWithBalls:(NSMutableDictionary*)b;
+
+@end
+
+@interface RedState : StateMachine
+@end
+
+@interface ColourState : StateMachine
+@end
+
+@interface FoulState : StateMachine
+@end
+
+@interface ColourOnlyState : StateMachine
+@end

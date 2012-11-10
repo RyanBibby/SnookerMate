@@ -1,0 +1,29 @@
+//
+//  Ball.h
+//  SnookerMate
+//
+//  Created by Ryan Bibby and Mark Dessain on 01/12/2011.
+//
+//  For enumerating the value of a ball
+//
+
+#import <Foundation/Foundation.h>
+
+typedef enum {
+    WHITE = 4,
+    RED = 1,
+    YELLOW = 2,
+    GREEN = 3,
+    BROWN = 4,
+    BLUE = 5,
+    PINK = 6,
+    BLACK = 7
+} BallColour;
+
+@interface Ball : NSObject
+
+@property (assign) BallColour value;
+
+- (id)initWithColour:(BallColour)ballColour;
+
+@end

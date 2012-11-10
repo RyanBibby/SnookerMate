@@ -1,0 +1,21 @@
+//
+//  Pot.h
+//  SnookerMate
+//
+//  Created by Mark Dessain on 10/12/2011.
+//  Copyright 2011 Mark Dessain. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "Ball.h"
+
+@interface Pot : NSObject
+
+@property (nonatomic, retain) NSString* player;
+@property (nonatomic, retain) Ball* ball;
+@property (assign) BOOL foul;
+
+- (id)initWithBall:(Ball*)b andPlayer:(NSString*)p;
+- (id)initWithBall:(Ball*)b player:(NSString*)p andFoul:(BOOL)f;
+
+@end

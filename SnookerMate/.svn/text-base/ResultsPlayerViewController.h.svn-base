@@ -1,0 +1,20 @@
+//
+//  ResultsPlayerViewController.h
+//  SnookerMate
+//
+//  Created by Mark Dessain on 21/01/2012.
+//  Copyright 2012 Mark Dessain. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "Player.h"
+
+@interface ResultsPlayerViewController : UITableViewController
+
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;  
+@property (nonatomic, retain) NSArray *tableData;
+@property (nonatomic, retain) Player *player;
+
+-(void) update;
+@end

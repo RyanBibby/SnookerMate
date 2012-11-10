@@ -1,0 +1,34 @@
+//
+//  Pot.m
+//  SnookerMate
+//
+//  Created by Mark Dessain on 10/12/2011.
+//  Copyright 2011 Mark Dessain. All rights reserved.
+//
+
+#import "Pot.h"
+
+@implementation Pot
+
+@synthesize player, ball, foul;
+
+- (id)initWithBall:(Ball*)b andPlayer:(NSString*)p
+{
+    return [self initWithBall:b player:p andFoul:NO];
+}
+
+
+- (id)initWithBall:(Ball*)b player:(NSString*)p andFoul:(BOOL)f
+{
+    self = [super init];
+    if (self) {
+        ball = [b retain];
+        player = [p retain];
+        foul = f;
+    }
+    
+    return self;    
+}
+
+
+@end
